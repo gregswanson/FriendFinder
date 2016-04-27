@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find Your New BFF - Survey</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="bootstrap-slider.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+<div class="container">
+<div class="row">
+		<h2>Survey Questions</h2>
+		<hr>
+</div>
+
+<!--About You-->
+<div class="row">
+		<div class="aboutyou col-md-12">
+			<div class="col-md-12">
+				<h4>Name (Required)</h4>	
+			    <input type="text" class="form-control" id="name" placeholder="Type your name here">
+				<h4>Link to Photo (Required)</h4>	
+			    <input type="text" class="form-control" id="photp" placeholder="Type your link here">
+			</div>
+		</div>		
+</div>
+
+<!--Questions-->
+<div class="row">
+	<div class="col-md-12">
+	<!--Question 1-->
+		<h4>1. Question One</h4>
+			<form class="form" id="q1">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default btnform"><input name="year" value="1" type="radio">Totally Agree</label>
+					<label class="btn btn-default btnform"><input name="year" value="2" type="radio">Somewhat Agree</label>
+					<label class="btn btn-default btnform"><input name="year" value="3" type="radio">Meh</label>
+					<label class="btn btn-default btnform"><input name="year" value="4" type="radio">Somewhat Disagree</label>
+					<label class="btn btn-default btnform"><input name="year" value="5" type="radio">Totally Disagree</label>
+        		</div>
+        	</form>
+		<!--Question 1 end -->
+
+		<!--Question 2-->
+		<h4>2. Question Two</h4>
+			<form class="form" id="q2">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default btnform"><input name="year" value="1" type="radio">Totally Agree</label>
+					<label class="btn btn-default btnform"><input name="year" value="2" type="radio">Somewhat Agree</label>
+					<label class="btn btn-default btnform"><input name="year" value="3" type="radio">Meh</label>
+					<label class="btn btn-default btnform"><input name="year" value="4" type="radio">Somewhat Disagree</label>
+					<label class="btn btn-default btnform"><input name="year" value="5" class="active" type="radio">Totally Disagree</label>
+        		</div>
+        	</form>
+		<!--Question 2 end -->
+		<br>
+	
+
+
+
+
+
+
+	
+	<!--button-->
+<button type="button" class="btn btn-primary btn-block" id="submit">Find your new BFF!</button>
+<!--button end -->
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!--container end -->
+</div>
+<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$(".btn-group > .btn").click(function(){
+    $(this).addClass("active").siblings().removeClass("active");
+});
+
+
+$('#submit').on( 'click', function(){  
+  	console.log($('input[name=year]:checked', '#q1').val());
+  	console.log($('input[name=year]:checked', '#q2').val());
+});
+
+</script>
+
+
+</body>
+</html>

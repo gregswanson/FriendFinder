@@ -1,0 +1,34 @@
+.aboutyou {
+	border: 1px solid #d5d5d5;
+	padding: 20px 10px;
+	border-radius: 5px;
+}
+
+.btn-group{
+	width: 100%;
+	display: inline-block;
+}
+
+.btnform {
+	width:20%;
+}
+
+/*
+.btnform.active, .btnform:active {
+    background-color: #51a3db;
+    color: #ffffff;
+}
+
+
+.btnform.hover, .btnform:hover {
+    background-color: #bdd3dd;
+}
+*/
+
+@media only screen and (max-width: 768px) {
+    .btnform {
+        width: 100%;
+        border-radius: 0px;
+
+    }
+}
