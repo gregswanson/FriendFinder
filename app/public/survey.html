@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="bootstrap-slider.css">
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 
@@ -22,9 +23,9 @@
 		<div class="aboutyou col-md-12">
 			<div class="col-md-12">
 				<h4>Name (Required)</h4>	
-			    <input type="text" class="form-control" id="name" placeholder="Type your name here">
+			    <input type="text" class="form-control inputtxt" id="name" placeholder="Type your name here">
 				<h4>Link to Photo (Required)</h4>	
-			    <input type="text" class="form-control" id="photo" placeholder="Type your link here">
+			    <input type="text" class="form-control inputtxt" id="photo" placeholder="Type your link here">
 			</div>
 		</div>		
 </div>
@@ -34,7 +35,7 @@
 	<div class="col-md-12">
 	
 	<!--Question 1-->
-		<h4>1. Question One</h4>
+		<h4 class="question">1. Question One</h4>
 			<form class="form" id="q1">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques1" value="1" type="radio">Totally Agree</label>
@@ -47,7 +48,7 @@
 		<!--Question 1 end -->
 
 		<!--Question 2-->
-		<h4>2. Question Two</h4>
+		<h4 class="question">2. Question Two</h4>
 			<form class="form" id="q2">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques2" value="1" type="radio">Totally Agree</label>
@@ -60,7 +61,7 @@
 		<!--Question 2 end -->
 
 		<!--Question 3-->
-		<h4>3. Question Three</h4>
+		<h4 class="question">3. Question Three</h4>
 			<form class="form" id="q3">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques3" value="1" type="radio">Totally Agree</label>
@@ -73,7 +74,7 @@
 		<!--Question 3 end -->
 
 		<!--Question 4-->
-		<h4>4. Question Four</h4>
+		<h4 class="question">4. Question Four</h4>
 			<form class="form" id="q4">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques4" value="1" type="radio">Totally Agree</label>
@@ -86,7 +87,7 @@
 		<!--Question 4 end -->
 
 		<!--Question 5-->
-		<h4>5. Question Five</h4>
+		<h4 class="question">5. Question Five</h4>
 			<form class="form" id="q5">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques5" value="1" type="radio">Totally Agree</label>
@@ -100,7 +101,7 @@
 
 
 <!--Question 6-->
-		<h4>6. Question Six</h4>
+		<h4 class="question">6. Question Six</h4>
 			<form class="form" id="q6">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques6" value="1" type="radio">Totally Agree</label>
@@ -113,7 +114,7 @@
 		<!--Question 6 end -->
 
 		<!--Question 7-->
-		<h4>7. Question Seven</h4>
+		<h4 class="question">7. Question Seven</h4>
 			<form class="form" id="q7">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques7" value="1" type="radio">Totally Agree</label>
@@ -126,7 +127,7 @@
 		<!--Question 7 end -->
 
 		<!--Question 8-->
-		<h4>8. Question Eight</h4>
+		<h4 class="question">8. Question Eight</h4>
 			<form class="form" id="q8">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques8" value="1" type="radio">Totally Agree</label>
@@ -139,7 +140,7 @@
 		<!--Question 8 end -->
 
 		<!--Question 9-->
-		<h4>9. Question Nine</h4>
+		<h4 class="question">9. Question Nine</h4>
 			<form class="form" id="q9">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques9" value="1" type="radio">Totally Agree</label>
@@ -152,7 +153,7 @@
 		<!--Question 9 end -->
 
 		<!--Question 10-->
-		<h4>10. Question Ten</h4>
+		<h4 class="question">10. Question Ten</h4>
 			<form class="form" id="q10">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques10" value="1" type="radio">Totally Agree</label>
@@ -166,32 +167,40 @@
 
 		<br>
 	
-
-
-
-
-
-
-	
 	<!--button-->
 <button type="button" class="btn btn-primary btn-block" id="submit">Find your new BFF!</button>
 <!--button end -->
 
 </div>
-
 </div>
-
-
-
-
-
-
-
-
 
 <!--container end -->
+
+<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h2 class="modal-title">Your New BFF is:</h2>
+	      </div>
+	      <div class="modal-body text-center">
+	        <h2 id="matchName"></h2>
+	        <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default modalBtn" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+<!---Modal End -->
+
 </div>
-<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
 
 <script type="text/javascript">
 
@@ -204,6 +213,18 @@ $(".btn-group > .btn").click(function(){
 $('#submit').on( 'click', function(){  
 
 //create object  for user data
+	// var q1 = parseInt($('input[name=ques1]:checked', '#q1').val());
+	// var q2 = parseInt($('input[name=ques2]:checked', '#q2').val());	
+	// var q3 = parseInt($('input[name=ques3]:checked', '#q3').val());
+	// var q4 = parseInt($('input[name=ques4]:checked', '#q4').val());
+	// var q5 = parseInt($('input[name=ques5]:checked', '#q5').val());
+	// var q6 = parseInt($('input[name=ques6]:checked', '#q6').val());
+	// var q7 = parseInt($('input[name=ques7]:checked', '#q7').val());
+	// var q8 = parseInt($('input[name=ques8]:checked', '#q8').val());
+	// var q9 = parseInt($('input[name=ques9]:checked', '#q9').val());
+	// var q10 = parseInt($('input[name=ques10]:checked', '#q10').val());
+			
+
 	var userdata = {
 		name: $('#name').val().trim(),
 		photo: $('#photo').val().trim(),
@@ -220,11 +241,24 @@ $('#submit').on( 'click', function(){
 				]
 	}
 
-//   	console.log($('input[name=year]:checked', '#q1').val());
-//   	console.log($('input[name=year]:checked', '#q2').val());
+// Grab the URL of the website
+	  var currentURL = window.location.origin;
+
+// AJAX post
+	$.post(currentURL + '/API/friends', userdata, function(data){
+		$("#matchName").text(data.name);
+	    $('#matchImg').attr("src", data.photo);
+	    console.log(data);
+
+//show modal
+	
+	$('#myModal').modal('toggle');    
+
+	});
+
  });
 
-alert(userdata);
+
 
 </script>
 
