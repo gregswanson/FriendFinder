@@ -1,7 +1,85 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-height:100%;
+}
+
+
+
+.jumbotron {
+ margin-top: 50px;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+.semibold{
+    font-weight: 700;
+}
+/* survey button */
+
+.purple {
+    color: #9840fb;
+}
+
+hr{
+    border: 1px solid #cb9ffd;
+}
+
+.surveyButton {
+    background-color: #9840fb;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.surveyButton.active {
+    background-color: #9840fb !important;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+
+
+.surveyButton:hover {
+    background-color: #cb9ffd;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+.surveyButton.active:hover {
+    background-color: #9840fb;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+.surveyButton:focus {
+     background-color: #cb9ffd;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+
+
+
+
+/* survey button end */   
+
+
+
+
 .aboutyou {
 	border: 1px solid #9840fb;
 	padding: 20px 10px;
 	border-radius: 5px;
+    background-color: #9840fb;
+    color: #ffffff;
 }
 
 .btn-group{
@@ -19,37 +97,85 @@
 .btnform.active {
     background-color: #9840fb !important;
     color: #ffffff;
+    border: 1px solid #9840fb;
 }
 
 .btn:active {
     background-color: #9840fb;
     color: #ffffff;
+    border: 1px solid #9840fb;
 }
 
 .btn-default:active {
     background-color: #9840fb !important;
     color: #ffffff !important;
+    border: 1px solid #9840fb;
 }
 
 .btnform:hover {
     background-color: #cb9ffd;
     color: #ffffff;
+    border: 1px solid #9840fb;
 }
 
 .btnform.active:hover {
     background-color: #9840fb;
     color: #ffffff;
+    border: 1px solid #9840fb;
 }
 
 .btnform:focus {
      background-color: #cb9ffd;
     color: #ffffff;
+    border: 1px solid #9840fb;
 }
 
 .inputtxt {
     border: 1px solid #9840fb;
 
 }
+
+/* submit button */
+
+.submitButton {
+    background-color: #9840fb;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.submitButton.active {
+    background-color: #9840fb !important;
+    color: #ffffff;
+}
+
+
+
+.btn-default:active {
+    background-color: #9840fb !important;
+    color: #ffffff !important;
+}
+
+.submitButton:hover {
+    background-color: #cb9ffd;
+    color: #ffffff;
+}
+
+.submitButton.active:hover {
+    background-color: #9840fb;
+    color: #ffffff;
+}
+
+.submitButton:focus {
+     background-color: #cb9ffd;
+    color: #ffffff;
+}
+
+/* submit button end */
+
 
 /*
 .btnform.active, .btnform:active {
@@ -114,7 +240,7 @@
 }
 
 #matchName {
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 
 @media only screen and (max-width: 768px) {
