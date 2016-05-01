@@ -36,7 +36,7 @@
 	<div class="col-md-12">
 	
 	<!--Question 1-->
-		<h4 class="question semibold">1. Question One</h4>
+		<h4 class="question semibold">1. I feel comfortable walking into a group full of strangers.</h4>
 			<form class="form" id="q1">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques1" value="1" type="radio">Totally Agree</label>
@@ -49,7 +49,7 @@
 		<!--Question 1 end -->
 
 		<!--Question 2-->
-		<h4 class="question semibold">2. Question Two</h4>
+		<h4 class="question semibold">2. I tend to daydream when I’m not supposed to.</h4>
 			<form class="form" id="q2">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques2" value="1" type="radio">Totally Agree</label>
@@ -62,7 +62,7 @@
 		<!--Question 2 end -->
 
 		<!--Question 3-->
-		<h4 class="question semibold">3. Question Three</h4>
+		<h4 class="question semibold">3. I slam things when I am angry.</h4>
 			<form class="form" id="q3">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques3" value="1" type="radio">Totally Agree</label>
@@ -75,7 +75,7 @@
 		<!--Question 3 end -->
 
 		<!--Question 4-->
-		<h4 class="question semibold">4. Question Four</h4>
+		<h4 class="question semibold">4. I don’t like being told what to do.</h4>
 			<form class="form" id="q4">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques4" value="1" type="radio">Totally Agree</label>
@@ -88,7 +88,7 @@
 		<!--Question 4 end -->
 
 		<!--Question 5-->
-		<h4 class="question semibold">5. Question Five</h4>
+		<h4 class="question semibold">5. If I see someone cry, I’ll want to cry too.</h4>
 			<form class="form" id="q5">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques5" value="1" type="radio">Totally Agree</label>
@@ -102,7 +102,7 @@
 
 
 <!--Question 6-->
-		<h4 class="question semibold">6. Question Six</h4>
+		<h4 class="question semibold">6. I need time alone to recharge.</h4>
 			<form class="form" id="q6">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques6" value="1" type="radio">Totally Agree</label>
@@ -115,7 +115,7 @@
 		<!--Question 6 end -->
 
 		<!--Question 7-->
-		<h4 class="question semibold">7. Question Seven</h4>
+		<h4 class="question semibold">7. I’m constantly jotting ideas down.</h4>
 			<form class="form" id="q7">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques7" value="1" type="radio">Totally Agree</label>
@@ -128,7 +128,7 @@
 		<!--Question 7 end -->
 
 		<!--Question 8-->
-		<h4 class="question semibold">8. Question Eight</h4>
+		<h4 class="question semibold">8. I would rather have a few good friends over many acquaintances.</h4>
 			<form class="form" id="q8">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques8" value="1" type="radio">Totally Agree</label>
@@ -141,7 +141,7 @@
 		<!--Question 8 end -->
 
 		<!--Question 9-->
-		<h4 class="question semibold">9. Question Nine</h4>
+		<h4 class="question semibold">9. I feel comfortable in my own skin.</h4>
 			<form class="form" id="q9">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques9" value="1" type="radio">Totally Agree</label>
@@ -154,7 +154,7 @@
 		<!--Question 9 end -->
 
 		<!--Question 10-->
-		<h4 class="question semibold">10. Question Ten</h4>
+		<h4 class="question semibold">10. I would rather read a book than watch TV.</h4>
 			<form class="form" id="q10">
 				<div class="btn-group" data-toggle="buttons">
 					<label class="btn btn-default btnform"><input name="ques10" value="1" type="radio">Totally Agree</label>
@@ -200,6 +200,28 @@
 	</div>
 <!---Modal End -->
 
+<!--Alert modal -->
+<div id="alertModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header text-center">
+	        <h2 class="modal-title bold">oops!</h2>
+	      </div>
+	      <div class="modal-body text-center">
+	        <h2 id="alertMsg" class="semibold"></h2>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default modalBtn2" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+<!--End Alert modal -->
+
 </div>
 
 <!-- footer -->
@@ -222,8 +244,62 @@ $(".btn-group > .btn").click(function(){
 });
 
 
+
 $('#submit').on( 'click', function(){  
 
+//validation
+
+	if($('#name').val() == ""){
+		  	$('#alertMsg').html('Please fill in your name');
+		 	$('#alertModal').modal('toggle'); 
+		 	$('#name').focus(); 
+
+	} else if ($('#photo').val() == ""){
+		  	$('#alertMsg').html('Please add a photo');
+		 	$('#alertModal').modal('toggle');
+		 	$('#photo').focus();
+
+	} else if ($('input[name=ques1]:checked', '#q1').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 1');
+		 	$('#alertModal').modal('toggle');
+
+	} else if ($('input[name=ques2]:checked', '#q2').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 2');
+		 	$('#alertModal').modal('toggle');
+
+	} else if ($('input[name=ques3]:checked', '#q3').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 3');
+		 	$('#alertModal').modal('toggle');
+
+	} else if ($('input[name=ques4]:checked', '#q4').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 4');
+		 	$('#alertModal').modal('toggle');
+
+	} else if ($('input[name=ques5]:checked', '#q5').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 5');
+		 	$('#alertModal').modal('toggle');
+
+	} else if ($('input[name=ques6]:checked', '#q6').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 6');
+		 	$('#alertModal').modal('toggle');
+
+	} else if ($('input[name=ques7]:checked', '#q7').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 7');
+		 	$('#alertModal').modal('toggle');
+
+	} else if ($('input[name=ques8]:checked', '#q8').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 8');
+		 	$('#alertModal').modal('toggle');
+
+	} else if ($('input[name=ques9]:checked', '#q9').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 9');
+		 	$('#alertModal').modal('toggle');
+
+	} else if ($('input[name=ques10]:checked', '#q10').val() == undefined ){
+		  	$('#alertMsg').html('Please answer Question 10');
+		 	$('#alertModal').modal('toggle');
+		 	
+	} else {
 
 	var userdata = {
 		name: $('#name').val().trim(),
@@ -255,6 +331,7 @@ $('#submit').on( 'click', function(){
 	$('#myModal').modal('toggle');    
 
 	});
+}
 
  });
 

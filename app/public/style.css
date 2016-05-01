@@ -243,6 +243,18 @@ hr{
     margin: 20px auto;
 }
 
+.modalBtn2 {
+    background-color: #9840fb;
+    border-color: #9840fb;
+    color: #fff;
+}
+
+.modalBtn2:hover {
+    background-color: #cb9ffd;
+    border-color: #cb9ffd;
+    color: #fff;
+}
+
 @media only screen and (max-width: 768px) {
     .btnform {
         width: 100%;
